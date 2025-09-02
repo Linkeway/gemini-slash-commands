@@ -1,0 +1,18 @@
+description="Reviews a Gitlab merge request based on issue number."
+prompt = """
+Please provide a detailed review for a Gitlab MR: !{{args}}.
+
+Follow these steps:
+
+1. Use `glab mr view {{args}} -c` to pull the information of the MR.
+2. Use `glab mr diff {{args}}` to view the diff of the MR.
+3. Understand the intent of the MR using the MR description.
+4. If MR description is not detailed enough to understand the intent of the MR, make sure to note it in your review.
+5. Make sure the MR title follows Conventional Commits, here are the last five commits to the repo as examples: !{git log --pretty=format:"%s" -n 5}
+6. Search the codebase if required.
+7. Write a concise review of the MR, keeping in mind to encourage strong code quality and best practices.
+8. Ask the user to confirm the review
+9. Use `glab mr note {{args}} -m {{review}}` to post the review to the MR.
+
+Remember to use the Gitlab CLI (`glab`) with the Shell tool for all Gitlab-related tasks.
+"""
