@@ -3,7 +3,6 @@ prompt = """
 Please provide a git branch of the current repo: {{args}}. If not provided, assumes current branch HEAD.
 
 Follow the steps:
-- 
 - If no branch name provided, assumes current branch HEAD. Otherwise check if branch exist locally with `git branch --list {{args}}`
 - If branch doesn't exist locally, confirm with user if we should fetch from remote via `git fetch origin/{{args}}`
 - Use `git diff master...<origin/branch or HEAD>` to view the change from this branch
