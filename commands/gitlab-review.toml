@@ -1,10 +1,10 @@
-description="Reviews a Gitlab merge request based on issue number."
+description="Review a Gitlab MR given MR number or branch name. Post result to Gitlab"
 prompt = """
 Please provide a detailed review for a Gitlab MR: !{{args}}.
 
 Follow these steps:
 
-1. Use `glab mr view {{args}} -c` to pull the information of the MR: !{glab mr view {{args}}}
+1. Use `glab mr view {{args}} -c` to pull the information of the MR: !{glab mr view {{args}} -c}
 2. Use `glab mr diff {{args}}` to view the diff of the MR: !{glab mr diff {{args}}}
 3. Understand the intent of the MR using the MR description.
 4. If MR description is not detailed enough to understand the intent of the MR, make sure to note it in your review.
