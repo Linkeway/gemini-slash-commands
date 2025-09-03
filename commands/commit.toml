@@ -1,8 +1,11 @@
 description = "Generates a Conventional Commit message based on staged changes."
 prompt = """
 You are an expert at writing Conventional Commit messages.
-Analyze the output of `git diff --staged` provided below and generate a concise and accurate commit message.
-The user's intent for this commit is: {{args}}
+1. Analyze the output of `git diff --staged` provided below and generate a concise and accurate commit message.
 Staged changes:
 !{git diff --staged}
+2. The user's intent for this commit is: {{args}}
+3. Search codebase if required
+4. Create a concise and clear commit message and show user
+5. `git commit -m ` with this message
 """
