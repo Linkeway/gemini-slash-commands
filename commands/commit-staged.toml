@@ -6,6 +6,6 @@ Staged changes:
 !{git diff --staged}
 2. The user's intent for this commit is: {{args}}
 3. Search codebase if required
-4. Create a concise and clear commit message and show user
+4. Create a concise and clear commit message
 5. `git commit -m ` with this message
 """
